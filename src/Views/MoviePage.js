@@ -1,10 +1,13 @@
 import React from "react";
 import TopPage from "./TopPage";
+import Header from "../Components/Header";
 
 function MoviePage(props){
+
     return(
         <div>
-            <button onClick={()=> {props.changeStateFunction('TopPage')}}>TopPage</button>
+            <h1>hee</h1>
+            <Header changeStateFunction={props.changeStateFunction}/>
         </div>
     
     )
