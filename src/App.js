@@ -5,6 +5,8 @@ import MoviePage from "./Views/MoviePage";
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
 
+import movies from './data/movies2.json';
+
 function App() {
   const [viewState, setViewState] = useState('TopPage');
   const [contentPage, setContentPage] = useState();
@@ -14,10 +16,10 @@ function App() {
 
     switch(newPage) {
       case 'TopPage' : 
-        setContentPage(<TopPage/>);
+        setContentPage(<TopPage movies={movies.results}/>);
         break;
       case 'MoviePage' :
-        setContentPage(<MoviePage/>);
+        setContentPage(<MoviePage movie={movies.results[0]} />);
         break;
     }
   }

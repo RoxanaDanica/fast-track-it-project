@@ -9,8 +9,6 @@ function Movie(props){
             <h5>{props.movie.release_date}</h5>
             <h5>{props.movie.popularity}</h5>
             <p>{props.movie.overview}</p>
-
-
         </div>
     )
 }
