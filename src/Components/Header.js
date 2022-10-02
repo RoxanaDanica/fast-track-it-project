@@ -7,8 +7,8 @@ function Header(props) {
            <button>Date</button>
            <button>Genre</button>
            <button>Name</button>
-           <button onClick={()=> {props.changeStateFunction('TopPage')}}>TopPage</button>
-           <button onClick={()=> {props.changeStateFunction('MoviePage')}}>MoviePage</button>
+           <button onClick={()=> {props.changePageFunction('TopPage')}}>TopPage</button>
+           <button onClick={()=> {props.changePageFunction('MoviePage')}}>MoviePage</button>
         </div>
     )
 }
