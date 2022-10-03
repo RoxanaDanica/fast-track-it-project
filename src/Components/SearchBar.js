@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-function SearchBar() {
+function SearchBar(props) {
+    const [inputText, setInputText] = useState('');
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        props.searchMovieFunction(inputText);
+    }
+
+    function handleTextChange(event) {
+        setInputText(event.target.value)
+    }
+
     return (
         <div>
-            <h1>Searchbar</h1>
+            <form onSubmit={handleSubmit}>
+                <input type="text" onChange={handleTextChange} />
+                <button type="submit">Search</button>
+            </form>
         </div>
     )
 }

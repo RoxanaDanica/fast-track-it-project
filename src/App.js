@@ -1,15 +1,18 @@
 import React from "react";
 import { useState } from "react";
+
 import TopPage from "./Views/TopPage"; 
 import MoviePage from "./Views/MoviePage"; 
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
 
+import './App.css';
+
 import movies from './data/movies2.json';
 
 function App() {
   const [viewState, setViewState] = useState('TopPage');
-  const [contentPage, setContentPage] = useState();
+  const [contentPage, setContentPage] = useState(<TopPage movies={movies.results}/>);
 
   function changePage(newPage) {
     setViewState(newPage);
@@ -23,12 +26,18 @@ function App() {
         break;
     }
   }
+
+  function searchMovie(text) {
+    console.log("Searched text: " + text); 
+  }
   
   return (
-    <div>
-      <SearchBar />
-      <Header changePageFunction={changePage} />
-      {contentPage}
+    <div className="App">
+      <SearchBar searchMovieFunction={searchMovie} />
+      <div className="column-container">
+        <Header changePageFunction={changePage} />
+        {contentPage}
+      </div>
     </div> 
   )
 

@@ -1,8 +1,10 @@
 import React from "react";
 
+import "../Styles/Header.css";
+
 function Header(props) {
     return(
-        <div>
+        <div className="Header-div">
            <button>Rating</button>
            <button>Date</button>
            <button>Genre</button>
