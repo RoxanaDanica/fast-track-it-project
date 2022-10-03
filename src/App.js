@@ -30,12 +30,16 @@ function App() {
   function searchMovie(text) {
     console.log("Searched text: " + text); 
   }
+
+  function getMoviesByGenre(genreId) {
+    console.log("Showing movie by Id" + genreId);
+  }
   
   return (
     <div className="App">
       <SearchBar searchMovieFunction={searchMovie} />
       <div className="column-container">
-        <Header changePageFunction={changePage} />
+        <Header changePageFunction={changePage}  getMoviesByGenreFunction={getMoviesByGenre}/>
         {contentPage}
       </div>
     </div> 
