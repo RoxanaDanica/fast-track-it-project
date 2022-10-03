@@ -11,8 +11,6 @@ function Header(props) {
            <button onClick={() => {props.getMoviesByGenreFunction(35)}}>Comedy</button>
            <button onClick={() => {props.getMoviesByGenreFunction(80)}}>Crime</button>
            <button onClick={() => {props.getMoviesByGenreFunction(18)}}>Drama</button>
-           <button onClick={()=> {props.changePageFunction('TopPage')}}>TopPage</button>
-           <button onClick={()=> {props.changePageFunction('MoviePage')}}>MoviePage</button>
         </div>
     )
 }

@@ -12,17 +12,17 @@ import movies from './data/movies2.json';
 
 function App() {
   const [viewState, setViewState] = useState('TopPage');
-  const [contentPage, setContentPage] = useState(<TopPage movies={movies.results}/>);
+  const [contentPage, setContentPage] = useState(<TopPage movies={movies.results} navigateToMovieFunction={navigateToMovie}/>);
 
-  function changePage(newPage) {
+  function changePage(newPage, movie) {
     setViewState(newPage);
 
     switch(newPage) {
       case 'TopPage' : 
-        setContentPage(<TopPage movies={movies.results}/>);
+        setContentPage(<TopPage movies={movies.results} navigateToMovieFunction={navigateToMovie} />);
         break;
       case 'MoviePage' :
-        setContentPage(<MoviePage movie={movies.results[0]} />);
+        setContentPage(<MoviePage movie={movie} />);
         break;
     }
   }
@@ -33,6 +33,10 @@ function App() {
 
   function getMoviesByGenre(genreId) {
     console.log("Showing movie by Id" + genreId);
+  }
+
+  function navigateToMovie(movie) {
+    changePage("MoviePage", movie);
   }
   
   return (

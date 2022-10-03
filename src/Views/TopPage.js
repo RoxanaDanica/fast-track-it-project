@@ -4,7 +4,7 @@ import '../Styles/TopPage.css';
 
 function TopPage(props){
     let cards = props.movies.map((item, index)=> {
-        return <Movie movie={item} key={index}/>
+        return <Movie movie={item} key={index} navigateToMovieFunction={props.navigateToMovieFunction}/>
     })
     return(
         <div className="toppage-div">

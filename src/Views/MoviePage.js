@@ -1,7 +1,6 @@
 import React from "react";
 
 function MoviePage(props){
-
     return(
         <div className="MoviePage-div">
             <img className="MoviePage-img" src={props.movie.poster_path}/>
