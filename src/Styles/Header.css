@@ -1,8 +1,18 @@
 .Header-div {
-    width: 25%;
-    height: auto;
+    width: 13%;
+    height: fit-content;
+    position: sticky;
+    top: 10vh;  
 }
 
 .Header-div > button {
+    height: 55px;
+    width: 125px;
+    text-decoration: none;
+    border: none;
     display: block;
+    margin: 15px auto auto auto;
+    border-radius: 15px;
+    font-size: larger;
+    box-shadow: 3px 3px 5px blue;
 }
