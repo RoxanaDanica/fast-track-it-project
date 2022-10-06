@@ -5,6 +5,7 @@ import TopPage from "./Views/TopPage";
 import MoviePage from "./Views/MoviePage"; 
 import SearchBar from "./Components/SearchBar";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 import './App.css';
 
@@ -46,6 +47,7 @@ function App() {
         <Header changePageFunction={changePage}  getMoviesByGenreFunction={getMoviesByGenre}/>
         {contentPage}
       </div>
+      <Footer/>
     </div> 
   )
 
