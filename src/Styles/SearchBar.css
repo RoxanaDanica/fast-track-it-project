@@ -32,4 +32,11 @@
     border-radius: 15px;
     font-size: larger;
     box-shadow: 3px 3px 5px blue;
+    transition-duration: 0.4s;
+}
+
+.SearchBar-button:hover {
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
 }
