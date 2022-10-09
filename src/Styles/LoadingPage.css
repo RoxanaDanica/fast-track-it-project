@@ -1,0 +1,9 @@
+.LoadingPage-div{
+    width: 100%;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.LoadingPage-div > h1 {
+    font-size: xx-large;
+}
