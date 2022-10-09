@@ -1,0 +1,10 @@
+.Footer-div{
+    width: 100%;
+    height: 20vh;
+    background-color: #fef6ff;
+    text-align: center;
+}
+
+.Footer-div > a{
+    display: block;
+}
